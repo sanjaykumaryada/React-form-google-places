@@ -21,8 +21,6 @@ The main component for rendering the Google Places suggestions. It includes the 
   - **suggestionsTypes**: An array of Google Place suggestion types.
   - **onSubmit**: An optional callback function triggered when the form is submitted.
 
-Certainly! Based on the provided steps, here's how you can instruct users to install the necessary dependencies for your library:
-
 ### How to Install
 
 1. Install the `your-google-location-suggest-library` package:
@@ -41,13 +39,13 @@ Certainly! Based on the provided steps, here's how you can instruct users to ins
    ></script>
    ```
 
+   Make sure to replace `'YOUR_API_KEY'` in the Google Maps script with your actual API key. Users need to obtain their own API key for using Google Maps services.
+
 3. Install the TypeScript types for Google Maps:
 
    ```bash
    npm install @types/googlemaps
    ```
-
-   Make sure to replace `'YOUR_API_KEY'` in the Google Maps script with your actual API key. Users need to obtain their own API key for using Google Maps services.
 
 4. In your `tsconfig.json`, add the following line under `compilerOptions` to include the `googlemaps` types:
 
@@ -70,7 +68,7 @@ import { useForm } from "react-hook-form";
 import { GoogleLocationSuggest } from "your-google-location-suggest-library";
 
 const YourFormComponent = () => {
-  const { control, handleSubmit } = useForm();
+  const { handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log("Form submitted with data:", data);
